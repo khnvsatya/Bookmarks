@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Poppins&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+body {
+  background-color: #123633;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+h1 {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 25px auto;
+  color: white;
+  font-family: Fredoka, sans-serif;
+  width: 350px;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  user-select: none;
+  text-transform: uppercase;
+}
+
+h1:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.item {
+  background-color: rgba(0, 0, 0, 0.5);
+
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+.item:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+a {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+.fa-times {
+  color: white;
+  float: right;
+  top: 2px;
+}
+
+.name {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.name img {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  vertical-align: sub;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  /* display: none; */
+}
+
+.show-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  width: 500px;
+  max-width: 95%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  animation: modalopen;
+}
+
+@keyframes modalopen {
+  form {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.close-icon {
+  font-size: 24px;
+  top: 13px;
+  right: 13px;
+  cursor: pointer;
+}
+
+.modal-header {
+  background-color: slateblue;
+  padding: 15px;
+  color: white;
+  font-family: sans-serif;
+}
+
+h3 {
+  margin: 0;
+}
+/* generally all headelements have defalut margin- so it's best practice to remove them */
+
+.modal-content {
+  padding: 20px;
+  background: whitesmoke;
+}
+
+/* form */
+.form-group {
+  height: 55px;
+}
+
+.form-input {
+  width: 97%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid slateblue;
+  outline: none;
+  display: block;
+}
+
+.form-label {
+  display: block;
+  color: slateblue;
+  font-size: 15px;
+}
+
+button {
+  color: white;
+  background-color: slateblue;
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:focus {
+  outline: none;
+}
